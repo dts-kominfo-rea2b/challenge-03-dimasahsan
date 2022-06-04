@@ -30,7 +30,13 @@ const listBelanjaan = (data) => {
 };
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const totalBelanjaan = null;
+const totalBelanjaan = (data) => {
+  let harga = 0;
+  for (let belanjaan of data) {
+    harga += belanjaan.harga * belanjaan.kuantitas;
+  }
+  return harga;
+};
 
 // ! JANGAN DIMODIFIKASI
 const main = () => {
